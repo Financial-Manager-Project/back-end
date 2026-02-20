@@ -16,22 +16,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "user")
+@Table(name = "bank")
 @Entity
-public class User {
+public class Bank {
+
     @Id
-    @Column(name = "user_id")
+    @Column(name = "bank_id")
     private UUID id;
 
     @NonNull
-    @Column(name = "user_name")
-    private String userName;
-
-    @NonNull
-    @Column(name = "email", unique = true)
-    private String email;
-
-    @NonNull
-    @Column(name = "password", length = 20)
-    private String password;
+    @Column(name = "bank_name")
+    private String name;
 }
