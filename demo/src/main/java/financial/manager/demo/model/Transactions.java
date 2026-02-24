@@ -3,6 +3,7 @@ package financial.manager.demo.model;
 import java.util.UUID;
 
 import financial.manager.demo.model.enums.TransactionEnum;
+import financial.manager.demo.model.enums.TransactionModeEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -39,6 +40,10 @@ public class Transactions {
     @Enumerated(EnumType.STRING)
     @Column(name = "transaction_type", nullable = false)
     private TransactionEnum type;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "transaction_mode", nullable = false)
+    private TransactionModeEnum transactionMode;
 
     @Column(name = "transaction_value", nullable = false)
     private double value;
