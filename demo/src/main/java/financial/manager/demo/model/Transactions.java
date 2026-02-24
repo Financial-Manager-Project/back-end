@@ -1,8 +1,8 @@
-package financial.manager.demo.models;
+package financial.manager.demo.model;
 
 import java.util.UUID;
 
-import financial.manager.demo.models.enums.TransactionEnum;
+import financial.manager.demo.model.enums.TransactionEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

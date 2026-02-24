@@ -1,8 +1,8 @@
-package financial.manager.demo.models;
+package financial.manager.demo.model;
 
 import java.util.UUID;
 
-import financial.manager.demo.models.enums.UsersRoleEnum;
+import financial.manager.demo.model.enums.UsersRoleEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -30,7 +30,7 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "user_role")
-    private UsersRoleEnum userRole = UsersRoleEnum.CLIENT;
+    private UsersRoleEnum userRole = UsersRoleEnum.USER;
 
     @Column(name = "user_name", nullable = false)
     private String userName;

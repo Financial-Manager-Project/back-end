@@ -1,4 +1,4 @@
-package financial.manager.demo.models;
+package financial.manager.demo.model;
 
 import java.util.UUID;
 

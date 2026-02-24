@@ -1,4 +1,4 @@
-package financial.manager.demo.models.enums;
+package financial.manager.demo.model.enums;
 
 public enum TransactionEnum {
     INCOME, EXPENSE
