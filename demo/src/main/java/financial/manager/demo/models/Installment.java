@@ -12,6 +12,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 @NoArgsConstructor
@@ -30,4 +33,12 @@ public class Installment {
 
     @Column(name = "amount_installment", nullable = false)
     private int amountInstallment;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category categoryId;
+
+    @ManyToOne
+    @JoinColumn(name = "credit_card_id", nullable = false)
+    private CreditCard creditCard;
 }

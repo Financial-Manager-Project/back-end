@@ -10,6 +10,22 @@ CreaditCard 1 -> 1 User
 User 1 -> m CreditCard
 Category 1 -> n Transactions
 Transactions 1 -> 1 Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 DefaultCategory 1 -> n Transactions
 Transactions 1 -> n DefaultCategory 
 UserCategory 1 -> 1 User
