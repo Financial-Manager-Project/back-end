@@ -1,5 +1,6 @@
 package financial.manager.demo.models;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -10,22 +11,31 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
+@Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "bank")
-@Entity
-public class Bank {
+@Table(name = "credit_card")
+public class CreditCard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "bank_id")
+    @Column(name = "credit_card_id")
     private UUID id;
 
-    @Column(name = "bank_name", nullable = false)
+    @Column(name = "credit_card_name", nullable = false)
     private String name;
+
+    @Column(name = "credit_limit", nullable = false)
+    private double creditLimit;
+
+    @Column(name = "closing_day", nullable = false)
+    private LocalDate closingDay;
+
+    @Column(name = "due_day", nullable = false)
+    private LocalDate dueDay;
 }

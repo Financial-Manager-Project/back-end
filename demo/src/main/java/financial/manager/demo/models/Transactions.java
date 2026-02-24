@@ -2,7 +2,7 @@ package financial.manager.demo.models;
 
 import java.util.UUID;
 
-import financial.manager.demo.models.enums.UsersRoleEnum;
+import financial.manager.demo.models.enums.TransactionEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -16,28 +16,28 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "users")
-@Entity
-public class User {
+@Table(name = "transactions")
+public class Transactions {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "user_id")
+    @Column(name = "transaction_id")
     private UUID id;
 
+    @Column(name = "title", nullable = false)
+    private String title;
+
+    @Column(name = "description", nullable = false)
+    private String description;
+
     @Enumerated(EnumType.STRING)
-    @Column(name = "user_role")
-    private UsersRoleEnum userRole = UsersRoleEnum.CLIENT;
+    @Column(name = "transaction_type", nullable = false)
+    private TransactionEnum type;
 
-    @Column(name = "user_name", nullable = false)
-    private String userName;
-
-    @Column(name = "email", unique = true, nullable = false)
-    private String email;
-
-    @Column(name = "password", nullable = false)
-    private String password;
+    @Column(name = "transaction_value", nullable = false)
+    private double value;
 }

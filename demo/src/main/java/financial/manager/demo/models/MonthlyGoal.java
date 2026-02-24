@@ -1,8 +1,9 @@
 package financial.manager.demo.models;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
-import financial.manager.demo.models.enums.UsersRoleEnum;
+import financial.manager.demo.models.enums.MonthlyEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -16,28 +17,26 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "users")
-@Entity
-public class User {
+@Table(name = "monthly_goal")
+public class MonthlyGoal {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "user_id")
+    @Column(name = "monthlygoal_id")
     private UUID id;
 
+    @Column(name = "monthlygoal_value", nullable = false)
+    private double value;
+
     @Enumerated(EnumType.STRING)
-    @Column(name = "user_role")
-    private UsersRoleEnum userRole = UsersRoleEnum.CLIENT;
+    @Column(name = "monthly", nullable = false)
+    private MonthlyEnum monthly;
 
-    @Column(name = "user_name", nullable = false)
-    private String userName;
-
-    @Column(name = "email", unique = true, nullable = false)
-    private String email;
-
-    @Column(name = "password", nullable = false)
-    private String password;
+    @Column(name = "time_to_end", nullable = false)
+    private LocalDate timeToEnd;
 }
