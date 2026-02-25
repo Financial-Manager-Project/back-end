@@ -50,9 +50,9 @@ public class Transactions {
 
     @ManyToOne
     @JoinColumn(name = "bank_id", nullable = false)
-    private Bank bankId;
+    private Bank bank;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private Category categoryId;
+    private Category category;
 }

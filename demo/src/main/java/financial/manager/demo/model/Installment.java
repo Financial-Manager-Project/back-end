@@ -15,6 +15,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,10 +35,10 @@ public class Installment {
     private int amountInstallment;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
-    private Category categoryId;
+    @JoinColumn(name = "credit_card", nullable = false)
+    private CreditCard creditCard;
 
     @ManyToOne
-    @JoinColumn(name = "credit_card_id", nullable = false)
-    private CreditCard creditCard;
+    @JoinColumn(name = "category", nullable = false)
+    private Category category;
 }
