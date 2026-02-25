@@ -1,7 +1,11 @@
 package financial.manager.demo.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import financial.manager.demo.model.enums.MonthlyEnum;
 import jakarta.persistence.Column;
@@ -45,4 +49,10 @@ public class MonthlyGoal {
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 }

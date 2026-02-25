@@ -1,6 +1,10 @@
 package financial.manager.demo.model;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -41,4 +45,10 @@ public class Installment {
     @ManyToOne
     @JoinColumn(name = "category", nullable = false)
     private Category category;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 }
