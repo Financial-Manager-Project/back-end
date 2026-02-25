@@ -7,7 +7,7 @@ import financial.manager.demo.DTO.UserDTO;
 import financial.manager.demo.model.User;
 
 @Mapper(componentModel = "spring")
-public interface UserMapper {
+interface UserMapper {
     UserDTO toDTO(User user);
 
     @Mapping(target = "id", ignore = true)

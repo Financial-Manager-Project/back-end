@@ -7,7 +7,7 @@ import financial.manager.demo.DTO.CreditCardDTO;
 import financial.manager.demo.model.CreditCard;
 
 @Mapper(componentModel = "spring")
-public interface CreditCardMapper {
+interface CreditCardMapper {
     CreditCardDTO toDTO(CreditCard creditCard);
 
     @Mapping(target = "id", ignore = true)

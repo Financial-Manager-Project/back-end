@@ -7,7 +7,7 @@ import financial.manager.demo.DTO.InstallmentDTO;
 import financial.manager.demo.model.Installment;
 
 @Mapper(componentModel = "spring")
-public interface InstallmentMapper {
+interface InstallmentMapper {
     InstallmentDTO toDTO(Installment installment);
 
     @Mapping(target = "id", ignore = true)

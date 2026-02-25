@@ -7,7 +7,7 @@ import financial.manager.demo.DTO.CategoryDTO;
 import financial.manager.demo.model.Category;
 
 @Mapper(componentModel = "spring")
-public interface CategoryMapper {
+interface CategoryMapper {
     CategoryDTO toDTO(Category category);
 
     @Mapping(target = "id", ignore = true)

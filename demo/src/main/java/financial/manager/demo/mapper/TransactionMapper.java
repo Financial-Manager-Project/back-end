@@ -5,7 +5,7 @@ import org.mapstruct.Mapping;
 import financial.manager.demo.DTO.TransactionDTO;
 import jakarta.transaction.Transaction;
 
-public interface TransactionMapper {
+interface TransactionMapper {
     TransactionDTO toDTO(Transaction transaction);
 
     @Mapping(target = "id", ignore = true)

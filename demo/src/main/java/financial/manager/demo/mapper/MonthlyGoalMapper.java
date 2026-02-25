@@ -7,7 +7,7 @@ import financial.manager.demo.DTO.MonthlyGoalDTO;
 import financial.manager.demo.model.MonthlyGoal;
 
 @Mapper(componentModel = "spring")
-public interface MonthlyGoalMapper {
+interface MonthlyGoalMapper {
     MonthlyGoalDTO toDTO(MonthlyGoalMapper monthlyGoal);
 
     @Mapping(target = "id", ignore = true)
