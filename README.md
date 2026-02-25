@@ -15,7 +15,7 @@ Uma API RESTful desenvolvida em **Java** com **Spring Boot** para gerenciamento 
 
 
 
-O domínio da aplicação foi cuidadosamente modelado para separar transações de conta corrente das faturas de cartão de crédito, refletindo cenários financeiros reais:
+O domínio da aplicação foi modelado para separar transações de conta corrente das faturas de cartão de crédito, refletindo cenários financeiros reais:
 
 * **User (`users`):** Gerencia os usuários do sistema com perfis de acesso (`CLIENT`, `ADMIN`).
 * **Category (`category`):** Sistema híbrido de categorias. Suporta categorias globais (nativas do sistema) e categorias personalizadas (vinculadas a um usuário específico através de chave estrangeira opcional).
@@ -32,6 +32,8 @@ O domínio da aplicação foi cuidadosamente modelado para separar transações 
 - [x] Prevenção de perda de precisão financeira (utilizando as melhores práticas tipográficas para dinheiro).
 - [x] Separação lógica entre gastos de débito (Transactions) e crédito (Installments).
 - [x] Implementação da camada de Repositórios (Spring Data).
+- [x] Padronização de entrada/saída com DTOs (Data Transfer Objects).
+- [x] Mapeamento desacoplado entre Entidades e DTOs (Mappers/MapStruct).
 - [ ] Implementação da camada de Serviços (Regras de negócio).
 - [ ] Criação dos Endpoints (REST Controllers).
 - [ ] Segurança e Autenticação (Spring Security + JWT).
