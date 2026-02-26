@@ -1,0 +1,18 @@
+package financial.manager.demo.DTO.request.user;
+
+import java.util.UUID;
+
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class UserRequestBasicDTO {
+    @NotNull(message = "User ID is required")
+    private UUID id;
+}
