@@ -1,8 +1,7 @@
-package financial.manager.demo.DTO;
+package financial.manager.demo.DTO.response.category;
 
 import java.util.UUID;
- 
-import jakarta.validation.constraints.NotBlank;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,9 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class CategoryDTO {
-    @NotBlank(message = "Category name is required")
+public class CategoryResponseSummaryDTO {
+    private UUID id;
     private String name;
-
-    private UUID userId;
 }
