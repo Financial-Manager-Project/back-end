@@ -12,4 +12,4 @@ interface CreditCardMapper {
 
     @Mapping(target = "id", ignore = true)
     CreditCard toEntity(CreditCardDTO creditCardDTO);
-}
+} 
