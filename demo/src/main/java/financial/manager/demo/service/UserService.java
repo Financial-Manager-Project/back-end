@@ -1,14 +1,19 @@
 package financial.manager.demo.service;
 
 import java.util.List;
-import java.util.UUID;
 
-import financial.manager.demo.DTO.UserDTO;
+import financial.manager.demo.DTO.request.user.UserRequestBasicDTO;
+import financial.manager.demo.DTO.request.user.UserRequestDTO;
+import financial.manager.demo.DTO.response.user.UserResponseSummaryDTO;
 
-interface UserService {
-    List<UserDTO> getAllUser();
-    UserDTO getUserById(UUID id);
-    UserDTO createUser(UserDTO data);
-    UserDTO updatedUserById(UUID id, UserDTO data);
-    String deletedUserById(UUID id);
+public interface UserService {
+    List<UserResponseSummaryDTO> getAllUsers();
+
+    UserResponseSummaryDTO getUserById(UserRequestBasicDTO id);
+
+    UserResponseSummaryDTO createUser(UserRequestDTO data);
+
+    UserResponseSummaryDTO updateUserById(UserRequestBasicDTO id, UserRequestDTO data);
+
+    void deleteUserById(UserRequestBasicDTO id);
 }
