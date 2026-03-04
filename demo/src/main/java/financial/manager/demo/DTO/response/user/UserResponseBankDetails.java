@@ -12,6 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class UserResponseBankDetails {
-    private List<Bank> bankList;
+public class UserResponseBankDetails {  
+     private List<Bank> bankList;
 }
