@@ -14,6 +14,7 @@ import jakarta.validation.constraints.NotNull;
 @Getter
 @Setter
 public class UserRequestDTO {
+    
     @NotNull(message = "User role is required")
     private UsersRoleEnum userRole;
 

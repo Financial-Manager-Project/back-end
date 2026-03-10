@@ -12,7 +12,6 @@ import lombok.Setter;
 @Setter
 @Getter
 public class UserUpdateDTO {
-    private UUID id;
     private String userName;
     private String email;
     private String password;
